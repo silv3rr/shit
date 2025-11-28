@@ -1,0 +1,10 @@
+[Unit]
+Description=glftpd socket
+[Socket]
+ReusePort=true
+#ListenStream=[::]:9988
+ListenStream=0.0.0.0:9988
+Accept=yes
+#MaxConnections=64
+[Install]
+WantedBy=sockets.target

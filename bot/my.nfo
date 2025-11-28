@@ -1,0 +1,29 @@
+
+       ------------------------------------------------------------------
+
+                    Arist      : #Artist                                                         
+                    Title      : #Album                                                          
+                    Genre      : #Genre                                                          
+                    Rource     : #Source                          
+                    RelDate    : #Rdate                       
+                    AirDate    : #Sdate                       
+
+                    Tracks     : #Tn           
+                    Length     : #Cpti         
+                    Size       : #Size         
+                    Quality    : #Brkbps       
+
+
+
+
+         Nr    Name                                                Time
+       ------------------------------------------------------------------
+         #N    #Trk                                               #Ptit
+       ------------------------------------------------------------------
+                                                        total:   #Tptit
+
+
+
+        #Rnotes                                                               
+
+

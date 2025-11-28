@@ -1,0 +1,5 @@
+shit   ALL=NOPASSWD: /bin/chown -R shit\:shit /home/shit/jail/glftpd/site/*/*
+
+Cmnd_Alias GLCHOWN = /bin/chown -R shit\:shit /home/shit/jail/glftpd/site*
+shit  ALL = (root) NOPASSWD: GLCHOWN
+

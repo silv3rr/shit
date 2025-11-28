@@ -1,0 +1,52 @@
+server {
+	listen       1.2.3.4:443 ssl;
+	server_name  _;
+
+	root /var/www/html/;
+
+	include snippets/snakeoil.conf;
+	ssl_protocols TLSv1.3;
+	ssl_prefer_server_ciphers on;
+	ssl_dhparam /etc/nginx/dhparam.pem;
+	ssl_ciphers EECDH+AESGCM:EDH+AESGCM;
+	ssl_ecdh_curve secp384r1;
+	ssl_session_timeout  10m;
+	ssl_session_cache shared:SSL:10m;
+	ssl_session_tickets off;
+
+	access_log /var/log/nginx/tmp-access.log;
+	error_log  /var/log/nginx/tmp-error.log error;
+
+	server_tokens off;
+
+	satisfy all;
+
+	#error_page 502 = /error.html;
+	index index.html index.htm index.php;
+	
+	location /tmp/ {
+		autoindex on;
+		root /var/www/transfer;
+		try_files $uri $uri/ =404;
+	}
+
+	location ~ /\.ht {
+		deny all;
+	}
+
+	location ~ /\.git {
+		deny all;
+	}
+
+	location ~ /(LICENSE|README|README.md|SECURITY.md|config.php|screenshot.gif)$ {
+		deny all;
+	}
+
+        location / {
+                proxy_pass http://localhost:3000/;
+	}
+
+	location @error {
+		index /error.html;
+	}
+}

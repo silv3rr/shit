@@ -1,0 +1,1 @@
+weechat-fish/fish.py

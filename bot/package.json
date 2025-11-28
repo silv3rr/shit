@@ -1,0 +1,40 @@
+{
+  "name": "js-bot",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node bot.js 2>&1 | tee -a bot.log",
+    "stop": "pkill -9 -f \"node.*bot.js\"",
+    "restart": "npm stop --if-present --; sleep 1; npm start --",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "private": true,
+  "main": "bot.js",
+  "dependencies": {
+    "async": "^2.5.0",
+    "base64-js": "^1.3.1",
+    "buffer": "^5.4.3",
+    "cheerio": "^1.0.0-rc.2",
+    "chokidar": "^3.0.2",
+    "crc": "^3.8.0",
+    "dgram": "^1.0.1",
+    "eases": "^1.0.8",
+    "get-mp3-duration": "^1.0.0",
+    "iconv": "^2.3.5",
+    "ieee754": "^1.1.13",
+    "irc": "^0.4.1",
+    "js-crc": "^0.2.0",
+    "kue": "^0.11.6",
+    "mp3-parser": "^0.3.0",
+    "node-uuid": "^1.4.8",
+    "promise": "^8.0.1",
+    "request": "^2.81.0",
+    "request-json": "^0.6.2",
+    "rsa-pem-from-mod-exp": "^0.8.4",
+    "safer-buffer": "^2.1.2",
+    "sladex-blowfish": "^0.8.1",
+    "timeline": "^3.4.1"
+  },
+  "license": "",
+  "description": ""
+}

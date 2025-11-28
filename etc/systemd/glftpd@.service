@@ -1,0 +1,6 @@
+[Unit]
+Description=glftpd per connection server
+[Service]
+ExecStart=-/home/shit/jail/glftpd/bin/glftpd -l -i -o -r /home/shit/jail/glftpd/glftpd.conf -s/home/shit/jail/glftpd/bin/glstrings.bin -e -x
+StandardInput=socket
+SyslogFacility=ftp

@@ -1,0 +1,19 @@
+[Unit]
+Description=bot
+#CollectMode=inactive-or-failed
+
+[Service]
+Type=simple
+#Type=forking
+Restart=on-failure
+RestartSec=3
+WorkingDirectory=/shit/bot/js
+#User=shit
+#Group=shit
+ExecStart=
+ExecStart=/usr/bin/node "bot.js"
+
+StandardOutput=append:/shit/bot/js/bot.log
+StandardError=append:/shit/bot/js/bot.log
+
+#RemainAfterExit=yes

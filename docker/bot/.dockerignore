@@ -1,0 +1,3 @@
+Dockerfile
+*.log.gz
+__pycache__/

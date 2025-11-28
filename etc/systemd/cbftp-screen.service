@@ -1,0 +1,9 @@
+[Unit]
+Description=cbftp
+
+[Service]
+Type=forking
+Restart=on-failure
+RestartSec=3
+ExecStart=
+ExecStart=/usr/bin/screen -dmS cbftp /shit/cbftp/cbftp.sh

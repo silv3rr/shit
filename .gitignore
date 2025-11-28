@@ -1,0 +1,17 @@
+*.bak
+*.log
+*.log.gz
+*.mp3
+*output.txt
+dirlog
+dupefile
+dupelog
+nukelog
+xferlog
+.cbftp/
+.vscode/
+__pycache__/
+backup/
+pzs-ng/
+test/
+
